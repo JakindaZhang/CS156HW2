@@ -17,9 +17,7 @@ rt_val = rf[rt]
 is_rtype = op == pyrtl.Const(0, 6)
 
 ### ADD ALU LOGIC HERE ###
-slt_bit = rs_val < rt_val
-
-slt_val = pyrtl.concat(pyrtl.Const(0, 31), slt_bit)
+slt_bit = pyrtl.signed_lt(rs_val, rt_val)
 
 add_val = rs_val + rt_val
 sub_val = rs_val - rt_val
