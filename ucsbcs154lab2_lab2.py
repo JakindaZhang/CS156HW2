@@ -26,6 +26,7 @@ sub_val = rs_val - rt_val
 and_val = rs_val & rt_val
 or_val  = rs_val | rt_val
 xor_val = rs_val ^ rt_val
+slt_val = pyrtl.concat(pyrtl.Const(0, 31), slt_bit)
 sll_val = pyrtl.shift_left_logical(rt_val, sh)
 srl_val = pyrtl.shift_right_logical(rt_val, sh)
 sra_val = pyrtl.shift_right_arithmetic(rt_val, sh)
